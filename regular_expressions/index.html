@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Change H1</h1>
+    <button id="button">Change Button</button>
+    <img src="/Screenshot 2026-04-14 145347.png" alt="">
+</body>
+<script>
+    $(document).ready(function(){
+        $("#button").click (function(){
+                    $("h1").hide(
+                        "fast"
+                    )
+                }
+        )
+    })
+    
+</script>
+</html>

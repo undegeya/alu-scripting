@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Events</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <h3>Click Event</h3>
+    <p id="text">Hello! Click the button to hide me.</p>
+    <button id="hide">Hide</button>
+    <img src="Screenshot_20260907-134838_TikTok.jpg">
+
+    <h3>Mouse Hover</h3>
+    <div id="box" style="width:150px;height:80px;border:2px solid black;">
+        Move mouse here
+    </div>
+
+    <h3>Focus and Keyboard</h3>
+    <input id="input" placeholder="Type here">
+
+    <script>
+        $(document).ready(function() {
+
+            $("#hide").click(function() {
+                $("#text").hide();
+            });
+            $('img').click(function() {
+                $(this).hide();
+            });
+
+            $("#box").mouseenter(function() {
+                $(this).css("background", "red");
+            });
+
+            $("#box").mouseleave(function() {
+                $(this).css("background", "white");
+            });
+
+            $("#input").focus(function() {
+                $(this).css("background", "yellow");
+            });
+
+            $("#input").keyup(function() {
+                console.log($(this).val());
+            });
+
+        });
+    </script>
+
+</body>
+</html>
